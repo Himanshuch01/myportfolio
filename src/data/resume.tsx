@@ -8,7 +8,7 @@ export const DATA = {
   location: "Lucknow, Uttar Pradesh",
   locationLink: "https://www.google.com/maps/place/lucknow",
   description:
-    "Fullstack Developer. I love building things and helping people. Very active on Linkedin.",
+    "Fullstack Developer. I love building things and helping people. Very active on Linkedin. ",
   summary: `Hey! I’m Himanshu, a passionate Full Stack Developer who loves building things that live on the internet. I create dynamic, scalable applications using modern web technologies and enjoy taking a project from zero to deployment. Whether it’s writing clean UI code or optimizing databases and APIs — I love doing it all. I believe great products are a blend of performance, creativity, and good user experience. Always learning. Always improving. Always building something cool! 🚀`,
 
   avatarUrl: "/my.jpg.jpg",
@@ -98,12 +98,12 @@ export const DATA = {
 
   projects: [
     {
-      title: "Portfolio Website",
+      title: "Life-Biotech",
       href: "https://himanshu-chauhan.vercel.app",
       dates: "2025",
       active: true,
       description:
-        "Designed and deployed a personal portfolio website showcasing skills, education, and projects using React, TypeScript, and Tailwind CSS. Deployed using Vercel with optimized Lighthouse scores.",
+        "A full-stack website built for Life-Biotech, a pharmaceutical manufacturing brand — includes a secure and smart admin panel for efficient product and workflow management.",
       technologies: [
         "React",
         "Next.js",
@@ -112,9 +112,78 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
-          href: "https://himanshu-chauhan.vercel.app",
-          icon: <Icons.globe className="size-3" />,
+          type: "View Source",
+          href: "https://github.com/Himanshu-0143/lifebiotech.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: undefined,
+    },
+    {
+      title: "Quite-Connect",
+      href: "#",
+      dates: "2025",
+      active: true,
+      description:
+        "Quite-Connect is a safe space for anonymous expression. Students and employees can share their feelings, release stress, and support each other — making campus and workplace environments more positive and healthy",
+      technologies: [
+        "Javascript",
+        "Tailwind CSS",
+        "HTML",
+      ],
+      links: [ 
+        {
+          type: "View Source",
+          href: "https://github.com/Himanshu-0143/Quite-Connect.git",
+          icon: <Icons.github className="size-3" />,
+        },
+        
+      ],
+      image: "",
+      video: undefined,
+    },
+    
+    {
+      title: "Interactive Calendar App",
+      href: "#",
+      dates: "2025",
+      active: true,
+      description:
+        "Built a full-stack calendar app supporting event creation, editing, and deletion. Integrated persistent MySQL storage and built robust PHP backend APIs. Designed minimal UI using Tailwind CSS with real-time updates.",
+      technologies: [
+        "PHP",
+        "Tailwind CSS",
+        "MySQL",
+      ],
+      links: [ 
+        {
+          type: "View Source",
+          href: "https://github.com/Himanshu-0143/php_project.git",
+          icon: <Icons.github className="size-3" />,
+        },
+        
+      ],
+      image: "",
+      video: undefined,
+    },
+    {
+      title: "Java Chat Application",
+      href: "#",
+      dates: "2025",
+      active: true,
+      description:
+        "Engineered a multi-threaded real-time chat app using Java Sockets and Swing GUI. Implemented secure client-server communication and user-friendly message UI with connection status indicators.",
+      technologies: [
+        "Java",
+        "Swing",
+        "Socket Programming",
+      ],
+      links: [
+        {
+          type: "View Source",
+          href: "https://github.com/Himanshu-0143/ChatApplication.git",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
@@ -123,51 +192,26 @@ export const DATA = {
     {
       title: "Online Food Ordering System",
       href: "#",
-      dates: "2024",
+      dates: "2023",
       active: true,
       description:
-        "**Coming Soon** - Developed a responsive web app for online food ordering featuring real-time dynamic cart, menu filters, and order summary. Focused on smooth UX using JavaScript and DOM optimization. Mobile-first and performance-optimized UI.",
+        " Developed a responsive web app for online food ordering featuring real-time dynamic cart, menu filters, and order summary. Focused on smooth UX using JavaScript and DOM optimization. Mobile-first and performance-optimized UI.",
       technologies: [
         "HTML5",
         "CSS3",
         "JavaScript",
       ],
-      links: [],
-      image: "",
-      video: undefined,
-    },
-    {
-      title: "Interactive Calendar App",
-      href: "#",
-      dates: "2024",
-      active: true,
-      description:
-        "**Coming Soon** - Built a full-stack calendar app supporting event creation, editing, and deletion. Integrated persistent MySQL storage and built robust PHP backend APIs. Designed minimal UI using Tailwind CSS with real-time updates.",
-      technologies: [
-        "PHP",
-        "Tailwind CSS",
-        "MySQL",
+      links: [
+        {
+          type: "View Source",
+          href: "https://github.com/Himanshu-0143/online_food_and_delivery.git",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
-      links: [],
       image: "",
       video: undefined,
     },
-    {
-      title: "Java Chat Application",
-      href: "#",
-      dates: "2023",
-      active: true,
-      description:
-        "**Coming Soon** - Engineered a multi-threaded real-time chat app using Java Sockets and Swing GUI. Implemented secure client-server communication and user-friendly message UI with connection status indicators.",
-      technologies: [
-        "Java",
-        "Swing",
-        "Socket Programming",
-      ],
-      links: [],
-      image: "",
-      video: undefined,
-    },
+    
   ],
   
     
