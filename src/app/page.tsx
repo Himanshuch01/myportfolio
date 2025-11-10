@@ -1,6 +1,8 @@
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import { Floating } from "@/components/magicui/floating";
+import { GradientText } from "@/components/magicui/gradient-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -27,16 +29,18 @@ export default function Page() {
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
-                className="max-w-[600px] text-base sm:text-lg md:text-xl"
+                className="max-w-[600px] text-base sm:text-lg md:text-xl text-muted-foreground"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-20 sm:size-24 md:size-28 border shrink-0">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <Floating duration={4}>
+                <Avatar className="size-20 sm:size-24 md:size-28 border-2 border-primary/20 shadow-lg shrink-0 ring-2 ring-primary/10">
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </Floating>
             </BlurFade>
           </div>
         </div>
@@ -118,11 +122,11 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1.5 text-sm font-medium">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1.5 text-sm font-medium shadow-lg">
                   My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Check out my latest work
+                  Check out my <GradientText>latest work</GradientText>
                 </h2>
                 <p className="text-muted-foreground text-base sm:text-lg md:text-xl/relaxed max-w-[700px] mx-auto">
                   I&apos;ve worked on a variety of projects, from simple
@@ -159,11 +163,11 @@ export default function Page() {
         <div className="grid items-center justify-center gap-4 px-6 text-center md:px-8 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1.5 text-sm font-medium">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1.5 text-sm font-medium shadow-lg">
                 Contact
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Get in Touch
+                <GradientText>Get in Touch</GradientText>
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground text-base sm:text-lg md:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
@@ -179,8 +183,8 @@ export default function Page() {
               {DATA.resumeUrl && (
                 <div className="pt-4">
                   <Link href={DATA.resumeUrl} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" className="gap-2 h-11 px-5 text-base">
-                      <FileText className="size-5" />
+                    <Button variant="outline" className="gap-2 h-11 px-5 text-base group hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:scale-105 hover:border-primary/50">
+                      <FileText className="size-5 group-hover:rotate-12 transition-transform" />
                       View Resume
                     </Button>
                   </Link>

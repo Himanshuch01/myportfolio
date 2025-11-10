@@ -6,6 +6,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { TiltCard } from "@/components/magicui/tilt-card";
+import { Shimmer } from "@/components/magicui/shimmer";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,15 +43,17 @@ export function ProjectCard({
   className,
 }: Props) {
   return (
-    <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
-    >
-      <Link
-        href={href || "#"}
-        className={cn("block cursor-pointer", className)}
+    <TiltCard className="group h-full">
+      <Card
+        className={
+          "flex flex-col overflow-hidden border hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 ease-out h-full relative bg-card/50 backdrop-blur-sm hover:border-primary/50"
+        }
       >
+        <Shimmer />
+        <Link
+          href={href || "#"}
+          className={cn("block cursor-pointer", className)}
+        >
         {video && (
           <video
             src={video}
@@ -112,5 +116,6 @@ export function ProjectCard({
         )}
       </CardFooter>
     </Card>
+    </TiltCard>
   );
 }
