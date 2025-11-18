@@ -12,8 +12,36 @@ import { DATA } from "@/data/resume";
 import { FileText } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import type { Metadata } from "next";
 
 const BLUR_FADE_DELAY = 0.04;
+
+export const metadata: Metadata = {
+  title: DATA.name,
+  description: DATA.description,
+  openGraph: {
+    title: DATA.name,
+    description: DATA.description,
+    url: DATA.url,
+    siteName: DATA.name,
+    images: [
+      {
+        url: `${DATA.url}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: `${DATA.name} - Full Stack Developer Portfolio`,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DATA.name,
+    description: DATA.description,
+    images: [`${DATA.url}/og-image.png`],
+  },
+};
 
 export default function Page() {
   return (
